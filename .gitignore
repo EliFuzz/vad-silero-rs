@@ -1,0 +1,14 @@
+target/
+*.onnx
+*.wav
+*.bin
+
+# Ignore IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db

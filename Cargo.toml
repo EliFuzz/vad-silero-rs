@@ -1,0 +1,21 @@
+[package]
+name = "vad-silero-rs"
+version = "0.1.5"
+edition = "2021"
+description = "Rust implementation of speech detection using Silero VAD"
+license = "MIT"
+
+[dependencies]
+eyre = "0.6.12"
+ndarray = "0.16.1"
+ort = "2.0.0-rc.10"
+samplerate = { version = "0.2.4", optional = true }
+ebur128 = { version = "0.1.10", optional = true }
+
+
+[features]
+default = ["helpers"]
+helpers = ["dep:ebur128", "dep:samplerate"]
+coreml = ["ort/coreml"]
+directml = ["ort/directml"]
+load-dynamic = ["ort/load-dynamic"]
