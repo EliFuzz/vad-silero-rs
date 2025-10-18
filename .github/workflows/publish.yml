@@ -1,4 +1,4 @@
-name: Publish Rust Crate
+name: Publish Rust  Crate
 
 on:
     push:
