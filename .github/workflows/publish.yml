@@ -15,6 +15,9 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
+            - name: Install cmake
+              run: apt-get update && apt-get install -y cmake
+
             - name: Publish crate
               run: cargo publish
               env:
